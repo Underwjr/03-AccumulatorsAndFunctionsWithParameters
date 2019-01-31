@@ -32,7 +32,7 @@ def main():
     #       ** Ask a TA or your professor for help in that case. **
     # -------------------------------------------------------------------------
 
-    # m4t_tester.main()
+    m4t_tester.main()
 
 
 def run_test_sum_of_digits():
@@ -186,7 +186,7 @@ def digits_in_cube(n):
     """
     return sum_of_digits(n**3)
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # Done4. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #   That is called TEST-DRIVEN DEVELOPMENT (TDD).
     #
@@ -200,7 +200,7 @@ def digits_in_cube(n):
 def run_test_digits_in_power():
     """ Tests the   digits_in_power   function. """
     # -------------------------------------------------------------------------
-    # TODO: 5. Implement this function.
+    # done5. Implement this function.
     #   It TESTS the  digits_in_power  function defined below.
     #   Include at least **   3   ** tests.
     #
@@ -210,6 +210,27 @@ def run_test_digits_in_power():
     print('--------------------------------------------------')
     print('Testing the   digits_in_power   function:')
     print('--------------------------------------------------')
+
+    # Test 1:
+    expected1 = 9
+    answer1 = digits_in_power(12, 2)
+    print('Test 1 expected:', expected1)
+    print('       actual:  ', answer1)
+    print('      ')
+
+    # Test 2:
+    expected2 = 10
+    answer2 = digits_in_power(8, 2)
+    print('Test 2 expected:', expected2)
+    print('       actual:  ', answer2)
+    print('      ')
+
+    # Test 3:
+    expected3 = 13
+    answer3 = digits_in_power(7, 2)
+    print('Test 3 expected:', expected3)
+    print('       actual:  ', answer3)
+    print('      ')
 
 
 def digits_in_power(n, k):
@@ -223,8 +244,10 @@ def digits_in_power(n, k):
       this function returns 18
       since 12 to the 3rd power is 1728 (whose digits sum to 18).
     """
+    x = n**k
+    return sum_of_digits(x)
     # -------------------------------------------------------------------------
-    # TODO: 6. Implement and test this function.
+    # done. Implement and test this function.
     #
     ###########################################################################
     # IMPORTANT: CALL, as many times as needed,
@@ -236,7 +259,7 @@ def digits_in_power(n, k):
 def run_test_fancy_sums_of_digits():
     """ Tests the   fancy_sums_of_digits   function. """
     # -------------------------------------------------------------------------
-    # TODO: 7. Implement this function.
+    # Done 7. Implement this function.
     #   It TESTS the  fancy_sums_of_digits  function defined below.
     #   Include at least **   3   ** tests.
     #
@@ -255,6 +278,27 @@ def run_test_fancy_sums_of_digits():
     # your 2nd and 3rd tests but READ THOSE TEST CASES CAREFULLY
     # in the doc-string to be sure that you understand the specification.
     # -------------------------------------------------------------------------
+
+    # Test 1:
+    expected1 = 1
+    answer1 = fancy_sums_of_digits(10)
+    print('Test 1 expected:', expected1)
+    print('       actual:  ', answer1)
+    print('      ')
+
+    # Test 2:
+    expected2 = 19084
+    answer2 = fancy_sums_of_digits(2)
+    print('Test 2 expected:', expected2)
+    print('       actual:  ', answer2)
+    print('      ')
+
+    # Test 3:
+    expected3 = 124309
+    answer3 = fancy_sums_of_digits(35)
+    print('Test 3 expected:', expected3)
+    print('      actual:  ', answer3)
+    print('      ')
 
 
 def fancy_sums_of_digits(n):
@@ -281,8 +325,11 @@ def fancy_sums_of_digits(n):
             -- the sum of the digits in (X ** Y) is 124309 (trust me!)
             -- so this function returns 124309.
     """
+    x = sum_of_digits(n ** 1000)
+    y = sum_of_digits(n ** 999)
+    return sum_of_digits(x ** y)
     # -------------------------------------------------------------------------
-    # TODO: 8. Implement and test this function.
+    # Done 8. Implement and test this function.
     #
     ###########################################################################
     # IMPORTANT: CALL, as many times as needed,
