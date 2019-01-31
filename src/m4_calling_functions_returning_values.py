@@ -67,6 +67,7 @@ def run_test_sum_of_digits():
     answer = sum_of_digits(826)
     print('Test 1 expected:', expected)
     print('       actual:  ', answer)
+    print('      ')
 
     # -------------------------------------------------------------------------
     # TO DO: 2 (continued).
@@ -77,13 +78,13 @@ def run_test_sum_of_digits():
     answer2 = sum_of_digits(755)
     print('Test 2 expected:', expected2)
     print('       actual:  ', answer2)
-
+    print('      ')
     # Test 3:
     expected3 = 28
     answer3 = sum_of_digits(85573)
     print('Test 3 expected:', expected3)
     print('       actual:  ', answer3)
-
+    print('      ')
     # Test 4:
     expected4 = 37
     answer4 = sum_of_digits(7556437)
@@ -127,7 +128,7 @@ def sum_of_digits(number):
 def run_test_digits_in_cube():
     """ Tests the   digits_in_cube   function. """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement this function.
+    # Done. Implement this function.
     #   It TESTS the  digits_in_cube  function defined below.
     #   Include at least **   3   ** tests.
     #
@@ -152,6 +153,27 @@ def run_test_digits_in_cube():
     print('Testing the   digits_in_cube   function:')
     print('-----------------------------------------------------')
 
+    # Test 1:
+    expected1a= 8
+    answer1a = digits_in_cube(5)
+    print('Test 1 expected:', expected1a)
+    print('       actual:  ', answer1a)
+    print('      ')
+
+    # Test 2:
+    expected2a=9
+    answer2a = digits_in_cube(3)
+    print('Test 2 expected:', expected2a)
+    print('       actual:  ', answer2a)
+    print('      ')
+
+    # Test 3:
+    expected3a=1
+    answer3a = digits_in_cube(1)
+    print('Test 3 expected:', expected3a)
+    print('       actual:  ',answer3a)
+    print('      ')
+
 
 def digits_in_cube(n):
     """
@@ -162,6 +184,7 @@ def digits_in_cube(n):
       If the integer (n) is 5    (so n cubed is 125),
       this function returns (1 + 2 + 5), which is 8.
     """
+    return sum_of_digits(n**3)
     # -------------------------------------------------------------------------
     # TODO: 4. Implement and test this function.
     #   Note that you should write its TEST function first (above).
